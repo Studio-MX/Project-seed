@@ -1,32 +1,15 @@
 router.get(/^\/License$/, async(req, res) => {
-	var licepage = `
-		<p>imitated-seed</p>
-		<p>(the seed v${version.major}.${version.minor}.${version.revision})</p>
-	`;
+	var licepage = ``;
 	
-	if(hostconfig.replicate_theseed_license) {
-		licepage = '';
-		if(ver('4.11.1')) {
-			licepage += `<h2>the seed</h2><p>v${version.major}.${version.minor}.${version.revision}</p>`;
-		} else {
-			licepage += `<h2>the seed (v${version.major}.${version.minor}.${version.revision})</h2>`;
-		}
+		licepage += `<h2>New seed</h2><p>version: 2.0.0</p>`;
+	
 		licepage += `
-			<p>Copyright <a href="https://theseed.io/">theseed.io</a> all rights reserved.</p>
+			<p>Copyright <a href="https://newseed.xyz/">newseed.xyz</a> all rights reserved.</p>
 			
 			<h3>Contributors</h3>
 			<ul class=wiki-list>
-				${
-					ver('4.13.0') ? `
-						<li>namu@theseed.io (backend & frontend)</li>
-						<li>PPPP@theseed.io (old frontend)</li>
-						<li>kasio@theseed.io (old render)</li>
-					` : `
-						<li>namu@theseed.io (backend)</li>
-						<li>PPPP@theseed.io (frontend)</li>
-						<li>kasio@theseed.io (old render)</li>
-					`
-				}
+				<li>iongames: All</li>
+    				<li>stoserver: Domain</li>
 			</ul>
 			
 			<h3>Open source license</h3>
